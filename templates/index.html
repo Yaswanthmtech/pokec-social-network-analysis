@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Network Analysis - MTech CSE Project</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>🌐 Social Network Analysis & Recommendation System</h1>
+            <p>MTech CSE - Data Structures Project | NIT</p>
+            <div id="network-stats" class="stats-bar">
+                <span>📊 Loading network statistics...</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="search-box">
+                <h2>Enter User ID to Analyze</h2>
+                <div class="input-group">
+                    <input type="number" id="userId" placeholder="Enter User ID (e.g., 1, 100, 1000)" min="1">
+                    <button id="analyzeBtn" onclick="analyzeUser()">🔍 Analyze</button>
+                </div>
+                <p class="hint">Try user IDs: 1, 100, 1000, 10000</p>
+            </div>
+        </section>
+
+        <!-- Loading Indicator -->
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Analyzing user network...</p>
+        </div>
+
+        <!-- Error Message -->
+        <div id="error" class="error-box" style="display: none;"></div>
+
+        <!-- Results Section -->
+        <div id="results" style="display: none;">
+            <!-- User Info Card -->
+            <section class="card">
+                <h2>👤 User Information</h2>
+                <div id="userInfo" class="info-grid"></div>
+            </section>
+
+            <!-- Current Friends -->
+            <section class="card">
+                <h2>👥 Current Friends</h2>
+                <div id="currentFriends"></div>
+            </section>
+
+            <!-- Recommended Friends -->
+            <section class="card highlight">
+                <h2>✨ Recommended Friends</h2>
+                <p class="subtitle">Based on Friend-of-Friend algorithm</p>
+                <div id="recommendedFriends"></div>
+            </section>
+
+            <!-- Top Influencers -->
+            <section class="card highlight">
+                <h2>🌟 Top Influencers with Similar Interests</h2>
+                <p class="subtitle">Highly connected users matching your profile</p>
+                <div id="topInfluencers"></div>
+            </section>
+
+            <!-- Algorithms Used -->
+            <section class="card info-card">
+                <h2>🔬 Algorithms & Data Structures Used</h2>
+                <div class="algorithm-list">
+                    <div class="algo-item">
+                        <strong>Graph (Adjacency List)</strong>
+                        <p>Stores friendships efficiently - O(1) lookup</p>
+                    </div>
+                    <div class="algo-item">
+                        <strong>Trie (Prefix Tree)</strong>
+                        <p>Fast interest matching - O(m) complexity</p>
+                    </div>
+                    <div class="algo-item">
+                        <strong>Max Heap</strong>
+                        <p>Top-K recommendations - O(log k) operations</p>
+                    </div>
+                    <div class="algo-item">
+                        <strong>Hash Map</strong>
+                        <p>User profile storage - O(1) access</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 MTech CSE Project | Dataset: Pokec Social Network (SNAP)</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
