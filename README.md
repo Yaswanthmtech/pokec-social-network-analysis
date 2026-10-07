@@ -79,16 +79,16 @@ Recommendation Ranking
        ▼
 Recommended Friends
 
-## 📸 Screenshots
+### 📸 Screenshots
 
 ### Web Application
 
-![Web Application](screenshots/webhome.jpeg)
+![Web Application](screenshots/01-web-application.jpeg)
 
 ### Friend Recommendations
 
-![Friend Recommendations](screenshots/recommed.jpeg)
+![Friend Recommendations](screenshots/02-friend-recommendations.jpeg)
 
 ### Top Influencers
 
-![Top Influencers](screenshots/influencers.jpeg)
+![Top Influencers](screenshots/03-top-influencers.jpeg)
