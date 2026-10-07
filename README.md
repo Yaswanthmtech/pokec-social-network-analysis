@@ -1,43 +1,94 @@
 # Social Network Analysis & Friend Recommendation System
 
-A scalable social network analysis and friend recommendation system
-implemented using Python and classical data structures.
+A scalable social network analysis and friend recommendation system developed as an M.Tech CSE project.
 
-## Features
+The system analyzes social-network relationships and generates friend recommendations using graph-based relationships and common user interests.
 
-- Social graph construction
+## 🚀 Features
+
+- Social network graph construction
 - Friend-of-friend recommendations
-- Interest-based recommendations
+- Interest-based friend recommendations
 - Trie-based interest matching
-- Max Heap based ranking
+- Max Heap-based recommendation ranking
 - Top influencer identification
 - CLI interface
-- Flask web interface
+- Flask-based web interface
+- Efficient user and relationship lookup
 
-## Data Structures
+## 🧠 Data Structures Used
 
-- Hash Map
-- Adjacency List
-- Trie
-- Max Heap
+### 1. Hash Map
 
-## Technologies
+Used for efficient user-profile and adjacency-list lookup.
 
-- Python
-- Flask
-- Pandas
-- NetworkX
+### 2. Graph — Adjacency List
 
-## Dataset
+Represents friendships between users efficiently for a sparse social network.
 
-Pokec Social Network Dataset
+### 3. Trie
 
-The raw dataset is not included in this repository because of its size.
-Place the dataset in the required local data directory before running.
+Used for interest-based matching and prefix searching.
 
-## How to Run
+### 4. Max Heap
 
-### CLI
+Used to efficiently rank and retrieve the highest-scoring recommendations.
 
-```bash
-python main.py
+## ⚙️ Recommendation Approach
+
+The system generates recommendations using two major signals:
+
+1. Mutual/friend-of-friend relationships
+2. Common user interests
+
+Candidates are scored and ranked to produce relevant recommendations.
+
+## 🏗️ Project Architecture
+
+```text
+User
+ │
+ ▼
+Flask Web Interface / CLI
+ │
+ ▼
+Data Loader
+ │
+ ├── User Profiles
+ └── Friendship Data
+ │
+ ▼
+Graph Builder
+ │
+ ▼
+Adjacency List
+ │
+ ├── Friend-of-Friend Recommendation
+ │
+ └── Interest Matching
+       │
+       ▼
+      Trie
+       │
+       ▼
+Recommendation Ranking
+       │
+       ▼
+    Max Heap
+       │
+       ▼
+Recommended Friends
+
+## 📸 Screenshots
+
+### Web Application
+
+![Web Application](screenshots/webhome.jpeg)
+
+### Friend Recommendations
+
+![Friend Recommendations](screenshots/recommed.jpeg)
+
+### Top Influencers
+
+![Top Influencers](screenshots/influencers.jpeg)
