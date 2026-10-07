@@ -83,12 +83,12 @@ Recommended Friends
 
 ### Web Application
 
-![Web Application](screenshots/01-web-application.jpeg)
+![Web Application](./screenshots/01-web-application.jpeg)
 
 ### Friend Recommendations
 
-![Friend Recommendations](screenshots/02-friend-recommendations.jpeg)
+![Friend Recommendations](./screenshots/02-friend-recommendations.jpeg)
 
 ### Top Influencers
 
-![Top Influencers](screenshots/03-top-influencers.jpeg)
+![Top Influencers](./screenshots/03-top-influencers.jpeg)
